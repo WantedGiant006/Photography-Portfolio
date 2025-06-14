@@ -1,0 +1,223 @@
+/* GALLERY GRID STYLES */
+
+.gallery {
+  background-color: #f1e5ff;
+  position: relative;
+  z-index: 100;
+  padding: 5rem 0;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #805ad5;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 6rem;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-auto-rows: min-content; /* Let the content define height */
+}
+
+.grid-item {
+  background: #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px #0000001a;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Click hover animation */
+.grid-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px -5px #0003;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* CATEGORY CARD BASE */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: #334155;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px #0000001a;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-card p {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+/* PLANTS & NATURE GRID */
+.plants-nature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, auto);
+  gap: 1rem;
+}
+
+/* DEVOTION GRID */
+.devotion-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 1rem;}
+
+/* TEXTURED LIVING GRID */
+.textured-living-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 1rem;
+}
+
+/*CREATURES OBSERVED GRID*/
+.creatures-observed-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 1rem;
+}
+
+/*SKIES AND LIGHT GRID*/
+.skies-light-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 1rem;
+}
+
+/*COCO GRID*/
+.coco-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(9, minmax(450px, 12vw));
+  gap: 1rem;
+}
+
+/* Responsive gallery grids */
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 6rem;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Desktop specific grids */
+@media (min-width: 1024px) {
+  .plants-nature-grid,
+  .skies-light-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .textured-living-grid,
+  .coco-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .devotion-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .creatures-observed-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Tablet layout */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile layout - 2 columns with category card on top */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .category-card {
+    grid-column: 1 / -1; /* Span full width */
+    order: -1; /* Move to top */
+    margin-bottom: 1rem;
+  }
+  
+  /* For Coco category with two cards */
+  .coco-grid .category-card:nth-of-type(2) {
+    order: 1; /* Second card goes in middle */
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 768px) {
+  /* Override all inline grid positioning on mobile */
+  .gallery-grid .grid-item,
+  .gallery-grid .category-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  
+  /* Make all gallery grids 2-column on mobile */
+  .plants-nature-grid,
+  .devotion-grid,
+  .textured-living-grid,
+  .creatures-observed-grid,
+  .skies-light-grid,
+  .coco-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+  }
+  
+  /* Category cards go to top */
+  .category-card {
+    order: -1;
+    grid-column: 1 / -1 !important; /* Span full width */
+    min-height: 120px;
+  }
+  
+  /* For Coco section with 2 category cards */
+  .coco-grid .category-card:first-of-type {
+    order: -2; /* First card at very top */
+  }
+  
+  .coco-grid .category-card:last-of-type {
+    order: 0; /* Second card in middle */
+  }
+}

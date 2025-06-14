@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurvansh Juneja Photography</title>
+    <link rel="icon" type="image/x-icon" href="./Assets/favicon.jpg">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <meta name="description" content="A personal photography portfolio showcasing moments, memories, and meaning through visual storytelling">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a onclick="scrollToSection('hero')"><div class="logo"><img src="./Assets/logo.png" alt="logo" width="100px"></div></a>
+            <ul class="nav-links">
+              <li><a onclick="scrollToSection('hero')">Home</a></li>
+              <li><a onclick="scrollToSection('about')">About</a></li>
+              <li><a onclick="scrollToSection('gallery')">Gallery</a></li>
+              <li><a onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-video-container">
+            
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="./Assets/hero-video.mp4" type="video/mp4">
+                <source src="your-video-file.webm" type="video/webm">
+            </video>
+            
+        </div>
+        
+        <div class="hero-bg"></div>
+        
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+        
+        <div class="hero-content">
+            <div class="portfolio-label">Creative&nbsp; Highlights</div>
+            <h1>"Moments. Memories. Meaning."</h1>
+            <p>A personal photography portfolio</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            
+            <div class="about-content">
+                <div class="profile-image">
+                    <div class="image-bg"></div>
+                    <div class="image-frame">
+                        <div class="placeholder-image">
+                            <img src="./Assets/profile-photo.jpg" alt="Profile Photo">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bio-text">
+                    <p>Hi, I'm Gurvansh Singh Juneja — a photographer, visual storyteller, and creative soul who finds beauty in the unspoken moments. I believe that my photography isn't about perfection; but about presence.</p>
+                    
+                    <p>Over the years, I've curated hundreds of visuals that reflect not just the world around me, but how I feel about it — from the warmth of sleepy street dogs to the serenity of forgotten temples, from playful kittens to textured shadows.</p>
+                    
+                    <p>I'm currently pursuing a degree in tech but my heart beats for design, storytelling, and human connection — whether that's through photography, building immersive websites, or just sitting under a sky that's pink for no reason.</p>
+                    
+                    <p>This portfolio is a slice of how I see the world. I hope you see a bit of yourself in it too.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+
+        <!-- Plants & Nature Grid -->
+        <div class="gallery-grid plants-nature-grid">
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 1 / 4">
+            <img src="./Assets/Images/1-plants-and-nature/1.png" alt="Plants & Nature 1" onclick="openModal(this.src, 'Champa in Bloom', 'We have this gorgeous champa plant at home that randomly decides when it\'s time to gift us with flowers. This photo? From one of those lucky days. The blossoms were full and fragrant, and the light that evening made everything feel golden and calm. I’ve clicked it a dozen times, but this shot — soft light, peaceful vibes — it just felt like a hug.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 1 / 2">
+            <img src="./Assets/Images/1-plants-and-nature/2.png" alt="Plants & Nature 2" onclick="openModal('./Assets/Images/1-plants-and-nature/2+.png', 'Between the Leaves', 'Another champa moment, but this one’s got a story. I saw this one full flower nestled among a bunch of little buds, like the proud big sibling. Took the photo from a weird angle — practically hanging sideways — just to avoid the messy background on the other side. But it worked out. Between two leaves, against an orange-ish sky, that little group of blooms just shone.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 1 / 3">
+            <img src="./Assets/Images/1-plants-and-nature/3.png" alt="Plants & Nature 3" onclick="openModal(this.src, 'Stretching Out', 'This macro shot feels kind of dramatic. Tiny, needle-like leaves just beginning to grow — poking out from their stem like they’re reaching for the lens. It’s such a simple thing, but when you zoom in and really look, it’s wild how alive they seem — like they’re trying to say something.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 3 / 5">
+            <img src="./Assets/Images/1-plants-and-nature/4.png" alt="Plants & Nature 4" onclick="openModal('./Assets/Images/1-plants-and-nature/4+.png', 'Shadow Ferns', 'Now this one’s not even a picture of the plant itself — it’s the shadow of a fern on the wall. There was just something about it: the way the silhouette fell so perfectly, soft but clear. I couldn’t explain what made it so special, but it felt quiet. Like something you notice only if you’re really looking.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 5 / 8">
+            <img src="./Assets/Images/1-plants-and-nature/5.png" alt="Plants & Nature 5" onclick="openModal(this.src, 'Layers & Droplets', 'Rose leaves resting gently on pine needles, and little droplets from the rain still clinging to them. I have a very specific habit — the moment it stops raining, I rush outside with my phone to look for leaves that caught the water just right. This one had all the right elements: texture, layers, droplets, and just the right mood.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 7 / 8">
+            <img src="./Assets/Images/1-plants-and-nature/6.png" alt="Plants & Nature 6" onclick="openModal('./Assets/Images/1-plants-and-nature/6+.png', 'The Bug Who Tried', 'This is from my ex-college — and honestly, it cracks me up. I accidentally disturbed this bright red-and-white striped bug while taking pictures, and it scrambled to hide under a leaf. But clearly, it didn’t succeed. It just sat there with its entire butt sticking out, pretending it was invisible. I had to take the shot. We’ve all been that bug sometimes.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 6 / 8">
+            <img src="./Assets/Images/1-plants-and-nature/7.png" alt="Plants & Nature 7" onclick="openModal('./Assets/Images/1-plants-and-nature/7+.png', 'Pine Closeup Goals', 'This one’s just... crisp. A close-up of pine tree leaves from my lawn that ended up looking exactly like those “Pinterest aesthetic” pine close-ups. It’s simple, clean, and strangely satisfying. I didn’t do much — the plant did all the work.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 4 / 6">
+            <img src="./Assets/Images/1-plants-and-nature/8.png" alt="Plants & Nature 8" onclick="openModal('./Assets/Images/1-plants-and-nature/8+.png', 'The Pre-Chilli Flower', 'From my mum’s garden — this tiny flower on a chilli plant, catching the soft glow of sunrise. It’s facing down, as if it’s shy, but in that quiet way, it’s already becoming something more. I love capturing these in-between moments — not a bud, not a fruit — just becoming.')"/>
+          </div>
+          <div class="category-card" style="grid-column: 2 / 3; grid-row: 2 / 7; background-color: #c0f5a2">
+            <h3>Plants & Nature</h3>
+            <p>Moments found in Leaves</p>
+          </div>
+        </div>
+
+        <!-- Devotion Grid -->
+        <div class="gallery-grid devotion-grid">
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 1 / 2">
+            <img src="./Assets/Images/2-devotion/1.png" alt="Devotion 1" onclick="openModal(this.src, 'Diwali Flame', 'Every Diwali, we light diyas outside our main gate — one on either side — and like every year, I get excited to do the shot. I drop the exposure, blur the surroundings, and let the flame glow sharp and warm. Sure, these are artificial candles now, but honestly? That doesn’t take away from the feel. Every time I see this photo, it instantly makes me want to light a hundred more and celebrate Diwali all over again.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 6; grid-row: 1 / 3">
+            <img src="./Assets/Images/2-devotion/2.png" alt="Devotion 2" onclick="openModal('./Assets/Images/2-devotion/2+.png', 'Golden Reflections', 'This one’s from Shri Harmandir Sahib — the Golden Temple in Amritsar. No matter how many cameras or angles, nothing can ever capture what it really feels like to stand there. This photo, though, tries. The way the Darbar glows with gold and the reflection dances in the water — it’s just something else. Peaceful, majestic, beyond words.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 6; grid-row: 3 / 5">
+            <img src="./Assets/Images/2-devotion/3.png" alt="Devotion 3" onclick="openModal(this.src, 'Balajipuram Days', 'This temple’s in Betul, Madhya Pradesh — we were visiting my mum’s side of the family, and took a quick trip to Balajipuram. It was buzzing with tourists, and still somehow peaceful. Between the chaos and the devotion, I remember just enjoying the atmosphere. Sometimes photos don’t need a perfect frame — they just hold memories.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 5 / 6; grid-row: 5 / 6">
+            <img src="./Assets/Images/2-devotion/4.png" alt="Devotion 4" onclick="openModal(this.src, 'Prayer Wheels in Manali', 'This is from the Tibetan monastery in Manali. I had this shot in my mind even before I knew if they had the spinning prayer wheels — and they did. It felt like a mini dream coming true. It’s a simple click, but to me, it captures the calm, spiritual vibe of the place. One of my favorite photos from the trip.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 5 / 6">
+            <img src="./Assets/Images/2-devotion/5+.png" alt="Devotion 5" onclick="openModal(this.src, 'Unexpected Stop', 'We’d just visited Shaniwar Wada — yep, for the first time ever despite being in Pune all my life — and on the way back, stumbled on this little temple. It wasn’t maintained much, and maybe that’s exactly why it felt nice. It was quiet, slightly rough around the edges, but genuine. Like a small sacred pause in the middle of the day.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 4 / 6">
+            <img src="./Assets/Images/2-devotion/6.png" alt="Devotion 6" onclick="openModal('./Assets/Images/2-devotion/6+.png', 'Ganpati Glow', 'This is from Ganesh Chaturthi 2024 in our society. A bunch of us were part of the celebrations and events, and just as we were leaving late at night, I saw this scene. The clubhouse was dark, except for one light falling perfectly on Bappa’s face. It looked so peaceful. I went right back in to take this photo — no edits, no extra setup — just Bappa in a moment of stillness.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 2 / 4">
+            <img src="./Assets/Images/2-devotion/7.png" alt="Devotion 7" onclick="openModal('./Assets/Images/2-devotion/7+.png', 'Golden Wall Blessings', 'This statue was on an outer wall of one of the many temples inside Balajipuram. It was late at night, and the golden finish was shining under the dim light like it was glowing from within. Not many people noticed it — it was kind of tucked away — but this quiet little corner felt powerful.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 2 / 4">
+            <img src="./Assets/Images/2-devotion/8.png" alt="Devotion 8" onclick="openModal('./Assets/Images/2-devotion/8+.png', 'Dagrushet Grandeur', 'This one’s from the annual Dagrushet Ganpati celebration in Pune — the decorations change every year and are always insanely detailed. I don’t even know what this year’s theme was, but the entire setup — Ganpati, the darbar, the dome, the chandelier — looked like something out of a film set. It’s not a close-up of Bappa, but of the whole space that felt so grand and alive.')"/>
+          </div>
+          <div class="category-card" style="grid-column: 3 / 4; grid-row: 3 / 5; background-color: #ff7e7e">
+            <h3>Devotion</h3>
+            <p>Spiritual connections</p>
+          </div>
+        </div>
+
+        <!-- Textured Living Grid -->
+        <div class="gallery-grid textured-living-grid">
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 1 / 3">
+            <img src="./Assets/Images/3-textured-living/1.png" alt="Textured Living 1" onclick="openModal(this.src, 'From the Stage', 'This photo is taken from the stage of an auditorium, but not during a show — after one. The lights are still on, casting a blinding glare, and the hall is empty. I had just finished singing at my aunt’s event, and once everyone left and the stage was cleared, I stood there and clicked this. It captures that weird nervous energy that lingers — even without an audience, the stage demands something of you. And in return, it gives you this surreal sense of presence.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 1 / 3">
+            <img src="./Assets/Images/3-textured-living/2.png" alt="Textured Living 2" onclick="openModal(this.src, 'Tracks of Ghoradongri', 'This image of railway tracks at Ghoradongri — a small village in MP — holds more nostalgia than it shows. It was early morning, around 6 or 7 AM, when we arrived. Being from the ex-sarpanch’s family, no one bats an eye when we skip the footbridge and cross the tracks directly. Somewhere between the carefreeness of village life and the symmetry of those tracks, I felt the urge to pause, soak it in, and shoot. And I did.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 1 / 2">
+            <img src="./Assets/Images/3-textured-living/3.png" alt="Textured Living 3" onclick="openModal('./Assets/Images/3-textured-living/3+.png', 'Like a Childhood Drawing', 'This scene from Mahabaleshwar is one I’ve witnessed countless times, yet it never fails to amaze me. A river flowing wide and majestic near you, slowly narrowing into the horizon — it’s literally like those childhood sceneries we all drew. Mountains, water, fading light. But here it was, for real. No sketch. Just calm, quiet, nature — doing what it does best.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 2 / 4">
+            <img src="./Assets/Images/3-textured-living/4.png" alt="Textured Living 4" onclick="openModal(this.src, 'Mud Stove, Glowing Fire', 'This rustic scene from Takli village features an age-old chula — a traditional mud stove still in use. Huge logs of wood poked out as the fire burned under a big black vessel. It wasn’t even placed directly under the sun, but the harsh light outside crept in just enough to give the image that dramatic glow. It felt like time stood still, like I was witnessing a way of life untouched by the speed of cities.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 2 / 4">
+            <img src="./Assets/Images/3-textured-living/5.png" alt="Textured Living 5" onclick="openModal(this.src, 'Arches of Wadia', 'The Wadia College in Pune stands tall with all its old-world charm. This click — from the base of the building — captures a symmetrical, isometric view of its arched windows. Some windows are cracked, others broken. And yet, that’s exactly what adds texture to the photo. It’s not perfect, but it’s alive. It has seen time. And it still stands proud.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 4 / 5">
+            <img src="./Assets/Images/3-textured-living/6.png" alt="Textured Living 6" onclick="openModal(this.src, 'Nightlight Sentinel', 'Late at night, just before closing, I found myself in a garden near the Ghoradongri railway station. The trees surrounded me on all three sides, but in the center, like a guardian of the dark, stood a lone street lamp. The photo feels quiet. It feels safe. As if the lamp was making sure the dark stayed in the shadows — and not in the heart.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 4 / 5">
+            <img src="./Assets/Images/3-textured-living/7.png" alt="Textured Living 7" onclick="openModal('./Assets/Images/3-textured-living/7+.png', 'The Door No One Uses', 'On a chaotic grocery run in Ghoradongri — where finding cheese felt like a scavenger hunt — I asked my cousin to pause just so I could capture this. An old wooden door, cracked and faded blue, nailed into a tiny brick wall guarding what seemed like a small forgotten garden. The door didn’t need to be functional. Its character alone was holding it up. And I’m so glad I stopped for it.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 4 / 5">
+            <img src="./Assets/Images/3-textured-living/8.png" alt="Textured Living 8" onclick="openModal('./Assets/Images/3-textured-living/8+.png', 'Garden Glow', 'Same garden, same night, just a different angle. We were walking along the designated path when this subtle, glowing scene caught my eye. A mix of tired street lamps barely lighting the way and a strong white beam from the nearby railway station illuminating the path just enough for us to walk peacefully. There’s nothing staged about this — it’s just quiet beauty doing its thing.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 3 / 4">
+            <img src="./Assets/Images/3-textured-living/9.png" alt="Textured Living 9" onclick="openModal(this.src, 'The Train Leaves, I Stay', 'At the Ghoradongri railway station, I had just received my aunt and cousins. As we walked away, the train that brought them began to leave. I stayed back for a few seconds, waited for it to pick up speed, and took the shot. The pink blur of the train in motion, the sharp station sign, and the glowing blue light in the shed came together like a perfect storm of accidental beauty — almost cinematic. Almost like... La La Land')"/>
+          </div>
+          <div class="category-card" style="grid-column: 2 / 3; grid-row: 3 / 4; background-color: #767676">
+            <h3>Textured Living</h3>
+            <p>Quietly alive</p>
+          </div>
+        </div>
+        
+        <!-- Creatures Observed Grid -->
+        <div class="gallery-grid creatures-observed-grid">
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 1 / 3">
+            <img src="./Assets/Images/4-creatures-observed/1.png" alt="Creatures Observed 1" onclick="openModal('./Assets/Images/4-creatures-observed/1+.png', 'A Close Encounter in Shimla', 'We were at a temple in Shimla with a narrow sanctum and a wide-open terrace overlooking endless mountains and houses tucked into the slopes. Out of nowhere, this wild monkey appeared and casually sat on the terrace wall, possibly expecting a bite of prasad. I slowly edged closer — risky, sure — but he just sat there, locking eyes with me. That exact moment, I clicked one of my best photos ever: just him and me, facing off in quiet stillness.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 1 / 3">
+            <img src="./Assets/Images/4-creatures-observed/2.png" alt="Creatures Observed 2" onclick="openModal(this.src, 'Tiny Napper, Big Campus', 'Wadia College was always full of street puppies — whole litters just strewn around like blessings. This particular photo captures one tiny pup, fast asleep with its siblings in the soft shade. I clicked it so carefully, making sure not to wake them. They’d snooze, then wake up, play a bit, then snooze again — just like clockwork. This one reminds me how peaceful chaos can feel sometimes.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 5 / 7; grid-row: 1 / 2">
+            <img src="./Assets/Images/4-creatures-observed/3.png" alt="Creatures Observed 3" onclick="openModal('./Assets/Images/4-creatures-observed/3+.png', 'Temple Guardian, Feline Edition', 'In a half-forgotten temple I visited with friends, I found this cat — deep in sleep, curled up atop a sacred platform. With weathered temple walls behind her and leafy trees filtering the light, she looked like she belonged there, like some quiet, divine guardian of the space. Her stillness echoed the age and serenity of the place.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 5 / 7; grid-row: 2 / 3">
+            <img src="./Assets/Images/4-creatures-observed/4.png" alt="Creatures Observed 4" onclick="openModal('./Assets/Images/4-creatures-observed/4+.png', 'A Garden Battle', 'In a garden at Koregaon Park, a mama cat and her kittens were play-fighting all over the place. This one shot, though — cinematic gold. The kitten’s in midair, falling, and mama’s up on a perch, watching. Even though it was all play, the way the photo freezes their motion makes it look like a fierce standoff straight out of a Nat Geo drama.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 5 / 6; grid-row: 3 / 4">
+            <img src="./Assets/Images/4-creatures-observed/5.png" alt="Creatures Observed 5" onclick="openModal('./Assets/Images/4-creatures-observed/5+.png', 'Pot of Dreams', 'Back in my old society after years, I found a kitten — barely bigger than a mango — curled up inside a flower pot like it was custom-made for her. She was surrounded by green plants, all neat in a row, but she stole the entire show with that sleepy, curled-up pose. One of those “right place, right time” kind of shots.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 6 / 7; grid-row: 3 / 4">
+            <img src="./Assets/Images/4-creatures-observed/6.png" alt="Creatures Observed 6" onclick="openModal(this.src, 'Sun-Soaked and Sleepy', 'Wadia again. This female dog was so sleepy she didn’t even bother to get up when I called her. She just tilted her head slightly, eyes half-lidded, golden sunlight catching in her amber eyes. That look — pure peace with just the right touch of curiosity.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 5 / 7; grid-row: 4 / 6">
+            <img src="./Assets/Images/4-creatures-observed/7.png" alt="Creatures Observed 7" onclick="openModal('./Assets/Images/4-creatures-observed/7+.png', 'Rural Rhythms in Motion', 'On my first trip to Takli village, I saw this young boy confidently steering a bullock cart down a sunlit path, flanked by green fields on both sides. No honks, no engines — just the quiet clop of hooves and the hum of real rural life. I had to capture it, and I’m glad I did.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 5 / 6">
+            <img src="./Assets/Images/4-creatures-observed/8.png" alt="Creatures Observed 8" onclick="openModal(this.src, 'Macro Magic on Cue', 'This one felt like destiny. I was showing my friends how I shoot macro photos using Pro mode on my smartphone. Just as I adjusted the focus and aimed at a tree trunk, I spotted it — a camouflaged insect perfectly blending into the bark. I clicked instantly and then casually showed them the image as if I’d planned the whole thing. Still feels unreal.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 4; grid-row: 5 / 6">
+            <img src="./Assets/Images/4-creatures-observed/9.png" alt="Creatures Observed 9" onclick="openModal(this.src, 'The Smile that Says It All', 'At my current college, there’s this teen dog who loves basking in the grass. This shot captures him lying down, eyes shut, with the softest smile on his face — like he’s soaking in the sunshine and all the goodness the world has to offer. It’s such a simple, sweet portrait of quiet contentment.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 5 / 6">
+            <img src="./Assets/Images/4-creatures-observed/10.png" alt="Creatures Observed 10" onclick="openModal(this.src, 'Wings of Detail', 'In my lawn, there’s only one butterfly species that ever shows up — the Talicada. This macro shot is one of my personal favorites: it shows the butterfly perched on a jade plant with such clarity you can even see the tiny hairs on its wings and body. It’s the little things that make you stop and really look.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 3 / 5">
+            <img src="./Assets/Images/4-creatures-observed/11.png" alt="Creatures Observed 11" onclick="openModal('./Assets/Images/4-creatures-observed/11+.png', 'Trailing in the Trees', 'In Manali’s Van Vihar, my sister was walking ahead on the forest path when this delightfully fluffy dog started following her. I snapped this moment from behind — the dog walking in rhythm with her like an old companion. The scene balances between modern and wild, a small symbol of how places like Manali are evolving without losing their roots.')"/>
+          </div>
+          <div class="category-card" style="grid-column: 3 / 5; grid-row: 3 / 5; background-color: #d3a3ff">
+            <h3>Creatures Observed</h3>
+            <p>They saw me. I waited. And sometimes, they let me in.</p>
+          </div>
+        </div>
+        
+        <!-- Skies and Light Grid -->
+        <div class="gallery-grid skies-light-grid">
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 1 / 3">
+            <img src="./Assets/Images/5-skies-and-lights/1.png" alt="Skies and Lights 1" onclick="openModal(this.src, 'The Rooftop Frame', 'In Ghoradongri, this was the roof of the home we stayed in — a symmetrically structured terrace with blue stair-step designs at either end and old tiled roofing in between. On top, there’s a strange upside-down matka-like piece — decorative, maybe, or symbolic, I still don’t know. But with that warm yellow-orange evening sky behind it, the whole frame feels frozen in quiet harmony.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 1 / 2">
+            <img src="./Assets/Images/5-skies-and-lights/2.png" alt="Skies and Lights 2" onclick="openModal('./Assets/Images/5-skies-and-lights/2+.png', 'Flight Over Bhigwan', 'Bhigwan is famous for flamingoes, but this photo isn’t about them. It’s of regular birds flying low over the water, in rhythm with our boat, while people watched from the edge. The sky above was vast, and the calm ripples below reflected the quiet magic of that moment. Sometimes, the ordinary things take your breath away more than the rare ones.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 1 / 2">
+            <img src="./Assets/Images/5-skies-and-lights/3.png" alt="Skies and Lights 3" onclick="openModal('./Assets/Images/5-skies-and-lights/3+.png', 'The Dinosaur in the Clouds', 'They call it the Dinosaur Mountain — maybe because of the ridges that resemble a dino’s back — nestled deep in the Sahyadris near Mahabaleshwar. This photo captures it surrounded by layers upon layers of misty mountain ranges, with thick monsoon clouds rolling above. The soft sun rays peeking through the gaps almost made it look like a divine painting.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 2 / 4">
+            <img src="./Assets/Images/5-skies-and-lights/4.png" alt="Skies and Lights 4" onclick="openModal(this.src, 'Golden Hour at Kalyani Nagar', 'This photo captures a perfectly aligned moment — a beautifully designed building in Kalyani Nagar soaking in the golden hour light. The orange sun hitting the glass, the glow reflecting back, and the calm of the fading day… it was one of those “had to click it” moments, and I’m glad I did.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 4 / 5">
+            <img src="./Assets/Images/5-skies-and-lights/5.png" alt="Skies and Lights 5" onclick="openModal(this.src, 'A Ray to the Roots', 'While driving from Ghoradongri to Betul, we paused for some photos. I happened to look up and saw this tall, leafless tree stretching into a bright blue sky, the sun rays sharply slicing down around it. Every single light ray was visible — like the tree was being touched by something far more significant than just sunlight.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 4 / 5">
+            <img src="./Assets/Images/5-skies-and-lights/6.png" alt="Skies and Lights 6" onclick="openModal(this.src, 'Reaching for the Light', 'Shot from my lawn, this image is a quiet story in itself. The sky that day was a surreal pink, and on one side of the frame is a tall street lamp from the garden. On the other side, a lone vine from a Malabar spinach plant — growing wild from a hanging pot — seems to reach out towards the light like it’s drawn by instinct. A small, living gesture in a vast, painted sky.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 4 / 5">
+            <img src="./Assets/Images/5-skies-and-lights/7.png" alt="Skies and Lights 7" onclick="openModal('./Assets/Images/5-skies-and-lights/7+.png', 'Ride into Sunrise', 'Early one morning, on my way to a competitive exam, I was riding pillion with my grandfather. The sun began rising right in front of us, and everything — the people, the traffic, the air — was bathed in fresh golden light. I spontaneously took out my phone and captured it while we rode. Accidental, yes. But so, so beautiful.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 3 / 4">
+            <img src="./Assets/Images/5-skies-and-lights/8.png" alt="Skies and Lights 8" onclick="openModal('./Assets/Images/5-skies-and-lights/8+.png', 'Behind the Fences of Osho Garden', 'We weren’t supposed to be inside — the Osho Garden in Koregaon Park was closed. But through the metal fence, I caught sight of this waterfall glowing in soft light as the sun was setting behind it. I’m not sure if it’s natural or man-made, but the way the water sparkled with light coming in from the left… it was like a secret scene meant only for the few who happened to be there.')"/>
+          </div>
+          <div class="category-card" style="grid-column: 2 / 3; grid-row: 2 / 4; background-color: #fdd0bc">
+            <h3>Skies and Lights</h3>
+            <p>Skies I paused for</p>
+          </div>
+        </div>
+
+        <!-- Coco Category-->
+        <div class="gallery-grid coco-grid">
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 1 / 3">
+            <img src="./Assets/Images/6-coco/1.png" alt="Coco 1" onclick="openModal('./Assets/Images/6-coco/1+.png', 'Golden Hour in Takli Village', 'We had taken Coco to a quiet little village near Pune — Takli — and something in him changed there. It was the first time our city boy behaved like a “real dog”: he chased wild chickens, dug into the earth with purpose, and sniffed the wind like he knew exactly where he belonged. This picture, taken at golden hour, shows him gazing into the horizon — silent, still, thoughtful. It was like he understood something we didn’t.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 1 / 3">
+            <img src="./Assets/Images/6-coco/2.png" alt="Coco 2" onclick="openModal('./Assets/Images/6-coco/2+.png', 'Post-Bath Madness', 'Bath time with Coco is war. He hates it with all his heart — tries to sneak away, sulks like a kid, but once he’s inside the bathroom, he just... accepts his fate. Sits there like a martyr. The moment he’s free, though, it’s pure chaos. He sprints across the lawn, rolls on the grass, bites his ball, and shakes water all over the place. This photo — with droplets caught mid-air — feels like a tiny victory. Taken on my phone, no DSLR tricks. Just timing, chaos, and one mad golden retriever.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 1 / 2">
+            <img src="./Assets/Images/6-coco/3.png" alt="Coco 3" onclick="openModal(this.src, 'Afternoon Ball Time', 'Midday. Harsh sun. Coco, completely unbothered, sat in the lawn chewing his worn-out tennis ball like it was the finest chew toy in existence. He wasn’t playing, he wasn’t posing. He was just... being. Some of my favorite photos are like this — when nothing’s happening, but everything feels right.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 2 / 3">
+            <img src="./Assets/Images/6-coco/4.png" alt="Coco 4" onclick="openModal(this.src, 'The Balcony Light', 'I call this his “cinematic moment.” Coco, perched on the couch, head gently resting on the armrest, staring out the balcony into the sunlit world. The light touched his face just perfectly — like it knew it had a job to do. I’ve taken at least 20 shots of this same scene, but this one felt the most real. He had a cold that day — you can even see his runny nose. I kept it. Because loving a dog isn’t about perfect poses. It’s about the mess too — the sleepy eyes, the sniffles, and everything in between.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 3 / 5">
+            <img src="./Assets/Images/6-coco/5.png" alt="Coco 5" onclick="openModal('./Assets/Images/6-coco/5+.png', 'Sunbathing Season', 'Coco’s a winter sun chaser. Every year, as soon as that first sliver of morning sunlight hits, he makes his way to the lawn and sits — still, eyes following the birds, breathing it all in. You can tell he loves those little things: warmth on fur, cool air, and open space. He doesn’t need a reason to be happy.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 5 / 6">
+            <img src="./Assets/Images/6-coco/6.png" alt="Coco 6" onclick="openModal('./Assets/Images/6-coco/6+.png', 'Lawn Chill Vibes', 'Nothing special. Just Coco being Coco — stretched out on his side in the lawn, eyes half open, absolutely at peace. And maybe that’s what makes this special.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 4 / 5; grid-row: 6 / 8">
+            <img src="./Assets/Images/6-coco/7.png" alt="Coco 7" onclick="openModal('./Assets/Images/6-coco/7+.png', 'Birthday Boy, Bowtie and All', 'He turned three that day. Freshly bathed (after the usual drama), fur puffed and fluffed, lawn party mode activated. His dog-owner neighbors gave him a brand new bowtie — he wore it like a prince. Getting him to look straight at the camera took effort (and a lot of treats), but we managed. Handsome, moody, slightly confused — just the way we love him.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 4; grid-row: 7 / 8">
+            <img src="./Assets/Images/6-coco/8.png" alt="Coco 8" onclick="openModal(this.src, 'Ears Like Pancakes', 'No treats. No posing. Just him lying upside down, ears flopped open like satellite dishes, staring into the lens like “What now?” I didn’t ask for the shot. He just gave it. And it was perfect in the dumbest, most adorable way.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 3 / 5; grid-row: 8 / 10">
+            <img src="./Assets/Images/6-coco/9.png" alt="Coco 9" onclick="openModal('./Assets/Images/6-coco/9+.png', 'The Swing & The Sky', 'This one’s from when Coco was still small, back when the world felt even bigger to him. He was sitting quietly on the lawn swing, just gazing up into the sky. No leash pulling, no barking — just stillness. As if he was trying to understand something up there. It was rare to see him like that — calm, reflective — and I’m so glad I caught it.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 9 / 10">
+            <img src="./Assets/Images/6-coco/10.png" alt="Coco 10" onclick="openModal('./Assets/Images/6-coco/10+.png', 'The Slide Incident', 'This moment? Absolute chaos. I was at the top of the slide in our society’s garden and Coco — leash in mouth like a maniac — was below, ready to bolt the second I came down. He had no toy nearby, so naturally, the leash became “the prey.” He gets this growly excitement when we play chase, but sadly his “play growl” sounds more like a threat to everyone else, so we usually end up scaring half the society. Still, it’s his favorite game — me sliding down, him running, and both of us being judged.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 7 / 9">
+            <img src="./Assets/Images/6-coco/11.png" alt="Coco 11" onclick="openModal('./Assets/Images/6-coco/11+.png', 'Masterpiece Mode Activated', 'Okay now this is one of my top-tier Coco captures. I made him sit at one end of the lawn with a treat and firmly told him to “WAIT!” (yes, shouted). I slowly walked to the opposite end, sat down, aimed my camera, and finally called him. That boy sprinted toward me like the wind — ears flying, tongue out, full action-mode. And boom, I got the shot. He may have been running toward the treat... but I like to think it was for me. (Don’t tell me otherwise.)')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 5 / 7">
+            <img src="./Assets/Images/6-coco/12.png" alt="Coco 12" onclick="openModal('./Assets/Images/6-coco/12+.png', 'Golden Hour. Golden Dog.', 'We were just hanging out in the lawn one evening, and suddenly — this pose. He looked straight into the camera with such intensity, such model-level confidence, I forgot he’s the same dog who eats grass and falls off beds. The golden light hit just right and for a second, he wasn’t just my dog — he was art.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 3; grid-row: 4 / 5">
+            <img src="./Assets/Images/6-coco/13.png" alt="Coco 13" onclick="openModal(this.src, 'That Side Profile Though', 'This one lives on my desktop for a reason. Coco sitting on the bed, looking out the window, sunlight grazing his fur... and that side profile? Impeccable. Regal. He looked like he was about to star in a perfume ad. There’s something about his face in this one — peace, awareness, and a little bit of smugness.')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 1 / 2; grid-row: 3 / 4">
+            <img src="./Assets/Images/6-coco/14.png" alt="Coco 14" onclick="openModal(this.src, 'Bean Tucked & Blanket Wrapped', 'It’s winter. He’s wrapped in this pristine white blanket, only his squishy face peeking out, pressed against the fluff like he’s trying to prove he’s cute on purpose. Everything else — paws, tail, chaos — is hidden. Just his sleepy little eyes and that expression that screams, “Look at me. Just look.”')"/>
+          </div>
+          <div class="grid-item" style="grid-column: 2 / 3; grid-row: 3 / 4">
+            <img src="./Assets/Images/6-coco/15.png" alt="Coco 15" onclick="openModal(this.src, 'The Pink Retriever', 'The sky was unreal that day — soft cotton candy pink — and Coco, sitting under it in the lawn, soaked up every bit of it. The light literally made his golden fur glow with a pinkish tint, like he’d been airbrushed by nature. It’s rare to see him just sit still and stare at the sky... but when he does, the world goes quiet.')"/>
+          </div>
+          <div class="category-card" style="grid-column: 3 / 4; grid-row: 3 / 5; background-color: #fcd09b">
+            <h3>And here is my dog, Coco!</h3>
+          </div>  
+          <div class="category-card" style="grid-column: 3 / 4; grid-row: 6 / 7; background-color: #fcd09b">
+            <h3>...coz, why not?</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-inner">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Selected image" class="modal-image">
+                </div>
+                <div class="modal-text-container">
+                    <div class="modal-text">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2>Get In Touch</h2>
+      
+      <form action="https://formspree.io/f/xeokgbok" method="POST" id="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+        <button type="submit">Submit</button>
+        <p id="form-message" class="form-message"></p>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <a href="#hero" class="footer-logo">
+          <img src="./Assets/logo.png" alt="Logo" />
+        </a>
+        <div class="footer-text">
+          <p>© 2025 Gurvansh Juneja Photography</p>
+          <p class="creator">Website by <a href="https://instagram.com/what_the_vansh/">Gurvansh Singh Juneja</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 520) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Modal functionality
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = modal.querySelector('.modal-text h3');
+    const modalDescription = modal.querySelector('.modal-text p');
+
+    function openModal(imageSrc, title = '', description = '') {
+        modalImage.src = imageSrc;
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+
+    const form = document.getElementById('contact-form');
+  const message = document.getElementById('form-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        message.textContent = "Thank you! Your message has been sent.";
+        form.reset();
+      } else {
+        message.textContent = "Oops! Something went wrong. Please try again.";
+        message.style.color = "#ef4444"; // red on error
+      }
+    } catch (error) {
+      message.textContent = "Network error. Please try again later.";
+      message.style.color = "#ef4444";
+    }
+  });
+    </script>
+</body>
+</html>
