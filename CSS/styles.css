@@ -254,13 +254,14 @@ body {
     max-width: 1200px;
     height: 80%;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    overflow: auto;
+    overflow: auto; /* Change from 'hidden' to 'auto' */
     animation: scaleIn 0.3s ease-out;
 }
+
 
 .modal-close {
     position: absolute;
@@ -287,8 +288,10 @@ body {
 
 .modal-inner {
     display: flex;
-    height: 100%;
+    min-height: 100%; /* Change from 'height: 100%' to 'min-height: 100%' */
+    flex-direction: column; /* Stack vertically by default */
 }
+
 
 .modal-image-container {
     flex: 1;
@@ -549,6 +552,18 @@ body {
     font-size: 0.875rem; /* Smaller text */
   }
 }
+@media (min-width: 769px) {
+    .modal-inner {
+        flex-direction: row; /* Side by side on larger screens */
+    }
+}
+.modal-content {
+    width: 95%;
+    height: 90%; /* Increase height slightly */
+    border-radius: 15px;
+    overflow: auto; /* Ensure this is also 'auto' */
+}
+
 
 @media (max-width: 480px) {
   .nav-links {
