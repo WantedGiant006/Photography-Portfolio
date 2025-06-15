@@ -448,6 +448,10 @@ body {
   opacity: 0.8;
 }
 
+.creator a {
+  color: #822ee8;
+  font-weight: 700;
+}    
 
 /* Animations */
 @keyframes pulse {
